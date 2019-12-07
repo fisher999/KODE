@@ -10,9 +10,21 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window: UIWindow?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        showController()
         return true
+    }
+    
+    private func showController() {
+        let recipesListController = RecipeListController()
+        let recipeListPresenter = RecipeListPresenterImpl(recipeView: recipesListController)
+        recipesListController.presenter = recipeListPresenter
+        let navigationController = UINavigationController(rootViewController: recipesListController)
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = navigationController
+        self.window?.makeKeyAndVisible()
     }
 }
 
