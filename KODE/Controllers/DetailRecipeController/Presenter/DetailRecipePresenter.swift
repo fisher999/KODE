@@ -15,7 +15,7 @@ protocol DetailRecipePresenter: class {
     func numberOfRows() -> Int
     func name() -> String
     func description() -> String?
-    func instruction() -> String
+    func instruction() -> NSAttributedString?
     func rating() -> Double
     func viewDidScrolled(offsetX: CGFloat, pageWidth: CGFloat)
 }
@@ -70,8 +70,9 @@ extension DetailRecipePresenterImpl: DetailRecipePresenter {
         return recipe.description
     }
     
-    func instruction() -> String {
-        return recipe.instructions
+    func instruction() -> NSAttributedString? {
+        let data = Data(recipe.instructions.utf8)
+        return try? NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html], documentAttributes: nil)
     }
     
     func rating() -> Double {

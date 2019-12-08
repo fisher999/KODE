@@ -75,11 +75,12 @@ class RecipeListController: BaseController {
     
     private func setupOther() {
         title = presenter.title()
-        ascendingButton.setTitle(presenter.ascendingType(), for: .normal)
+        ascendingButton.setTitle(presenter.ascendingButtonTitle(), for: .normal)
         sortSegmentedControl.removeAllSegments()
         for (index, sortTitle) in presenter.sortTypes().enumerated() {
             sortSegmentedControl.insertSegment(withTitle: sortTitle, at: index, animated: false)
         }
+        sortSegmentedControl.selectedSegmentIndex = 0
         sortSegmentedControl.addTarget(self, action: #selector(didSelectSegmentedControl(_:)), for: .valueChanged)
         ascendingButton.addTarget(self, action: #selector(didTappedAscendingButton(_:)), for: .touchUpInside)
     }
@@ -93,7 +94,7 @@ private extension RecipeListController {
     
     @objc func didTappedAscendingButton(_ sender: UIButton) {
         self.presenter.didTappedAscendingButton()
-        sender.setTitle(presenter.ascendingType(), for: .normal)
+        sender.setTitle(presenter.ascendingButtonTitle(), for: .normal)
     }
     
     @objc private func keyboardWillShow(sender: NSNotification) {

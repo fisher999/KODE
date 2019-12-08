@@ -47,7 +47,7 @@ class DetailRecipeController: BaseController {
     private func setupOther() {
         nameLabel.text = presenter.name()
         descriptionLabel.text = presenter.description()
-        instructionsLabel.text = presenter.instruction()
+        instructionsLabel.attributedText = presenter.instruction()?.withFont(UIFont(name: "Futura-Medium", size: 17) ?? UIFont.boldSystemFont(ofSize: 17)) ?? NSAttributedString(string: "")
         ratingView.isUserInteractionEnabled = false
         ratingView.rating = presenter.rating()
         pageControl.numberOfPages = presenter.numberOfRows()

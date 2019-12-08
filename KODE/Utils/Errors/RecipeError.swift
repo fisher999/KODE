@@ -15,6 +15,7 @@ enum RecipeError: Error {
     case decodeError(DecodingError)
     case unexpectedError(Error)
     case emptyUrl
+    case invalidPath(InvalidPath)
     
     var localizedDescription: String {
         switch self {
@@ -28,6 +29,8 @@ enum RecipeError: Error {
             return "Непредвиденная ошибка. Reason: \(err.localizedDescription)"
         case .emptyUrl:
             return "Отсутсвует  URL"
+        case .invalidPath(let err):
+            return "Не удалось прочитать файл: Reson: \(err.localizedDescription)"
         }
     }
 }

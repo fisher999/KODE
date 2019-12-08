@@ -19,7 +19,7 @@ protocol RecipeListPresenter: class {
     func searchBarScopeTitles() -> [String]
     func sortTypes() -> [String]
     func didChangedSearchCategory(index: Int, text: String?)
-    func ascendingType() -> String
+    func ascendingButtonTitle() -> String
     func didSelectSortType(sortIndex: Int)
     func didTappedAscendingButton()
 }
@@ -104,11 +104,11 @@ extension RecipeListPresenterImpl: RecipeListPresenter {
         reload()
     }
     
-    func ascendingType() -> String {
+    func ascendingButtonTitle() -> String {
         if ascending {
-            return "По возр."
-        } else {
             return "По убыв."
+        } else {
+            return "По возр."
         }
     }
     

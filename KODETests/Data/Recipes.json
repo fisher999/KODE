@@ -1,0 +1,36 @@
+"recipes": [
+{
+  "uuid": "fc988768-c1e9-11e6-a4a6-cec0c932ce01",
+  "name": "Pan Roasted Chicken with Lemon, Garlic, Green Beans and Red Potatoes",
+  "images": [
+    "https://bigoven-res.cloudinary.com/image/upload/w_300,c_fill,h_250/pan-roasted-chicken-with-lemon-garl-12.jpg"
+  ],
+  "lastUpdated": 524224800,
+  "description": "Pan-roasted chicken with lemon, garlic, green beans and red potatoes",
+  "instructions": "1. Preheat the oven to 230deg C. Coat a large baking dish or cast-iron skillet with 1 tbs of olive oil. Arrange the lemon slices in a single layer in the bottom of the dish or skillet.<br>2. In a large bowl, combine the remaining oil, lemon juice, garlic, salt and pepper; add the green beans and toss to coat. Using a slotted spoon or tongs, remove the green beans and arrange them on top of the lemon slices. Add the potatoes to the same olive oil mixture and toss to coat. Using a slotted spoon or tongs, arrange the potatoes along the inside edge of the dish or skillet on top of the green beans. Place the chicken in the same bowl with the olive oil mixture and coat thoroughly. Place the chicken, skin side up, in the dish or skillet. Pour any remaining olive oil mixture over the chicken.<br>3. Roast for 50 minutes. Remove the chicken from the dish or skillet. Place the beans and potatoes back in the oven for 10 minutes more or until the potatoes are tender.<br>4. Place a chicken breast on each of 4 serving plates; divide the green beans and potatoes equally. Serve warm.",
+  "difficulty": 3
+},
+{
+  "uuid": "8825cde8-630a-4027-9b9c-38b34bd4426b",
+  "name": "Roasted Chicken with Whole Lemon And Ginger",
+  "images": [
+    "https://bigoven-res.cloudinary.com/image/upload/t_recipe-256/roasted-chicken-with-whole-lemon-an.jpg",
+    "https://bigoven-res.cloudinary.com/image/upload/t_recipe-256/roasted-chicken-with-whole-lemon-an-2.jpg"
+  ],
+  "lastUpdated": 1481712335,
+  "instructions": "Preheat oven to 190 C, 375 F, Gas Mark 5. Grate one of the lemons and place the zest in a bowl. Grate the root ginger and mix with the lemon zest and the salt. Prick the remaining lemon with a fork punchuring the skin, wash and place the whole lemon inside the chicken. Mix the remaining mixture with the olive oil and rub into the chicken liberally. Place the chicken on a roasting rack over a roasting tray. Fill with the water and cover with tin foil. Cook the chicken according to pack istructions. Remove the tin foil 15 minutes before end of cooking time to brown skin. Remove the chicken from the oven, allow to rest for approxinmately 5-10 minutes,Remove the lemon from inside the chicken and being very careful squeeze any remaining juices into the bottom of the roasting tin. Carefully remove any fat from the surface of the juices and discard. Pour the remaining juice into a small pan and taste for flavour. (If it is too sharp add 1-2 tablespoons of caster sugar and stir until it dissolves over a gentle heat). Carve the chicken and arrrange on a serving plate. Pour the juices over the meat. NOTES : Organic baked chicken with whole lemon and fresh ginger.Excellent with whole roast tomatoes and fresh watercress.",
+  "difficulty": 3
+},
+{
+  "uuid": "19262b24-c1ef-11e6-a4a6-cec0c932ce01",
+  "name": "Meat Loaf",
+  "images": [
+    "https://bigoven-res.cloudinary.com/image/upload/t_recipe-256/meat-loaf-26.jpg",
+    "https://bigoven-res.cloudinary.com/image/upload/t_recipe-256/meat-loaf-27.jpg"
+  ],
+  "lastUpdated": 1481715335,
+  "description": "Yummy home made meat loaf, great for left overs.",
+  "instructions": "Mix thyme, cayenne, nutmeg, Panko bread crumbs, salt, and pepper into a small bowl, set aside. Mix eggs, minced garlic, minced or chopped onion, and 1/4 cup BBQ sauce in a medium bowl.<br>Break up ground beef so its not blocked or clumped, mix in the egg mixture until evenly distributed throughout then add bread crumb mixture until evenly distributed.<br>Put into loaf pan.<br>Bake at 350 degrees for 60 minutes<br>Take out, Drain grease from pan<br>Add 1 cup BBQ sauce on top then,<br>Bake for 15-20 minutes,",
+  "difficulty": 1
+}
+]

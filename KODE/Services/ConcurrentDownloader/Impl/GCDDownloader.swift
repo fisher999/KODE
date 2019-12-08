@@ -11,7 +11,7 @@ import FutureKit
 
 class GCDDownloader: ConcurrentDownloader {
     private var downloadImageQueue: DispatchQueue = .global()
-    private var serialQueue: DispatchQueue = .init(label: "com.KODETest.victor.Services.GCDDownloader")
+    private var serialQueue: DispatchQueue = .init(label: "com.victor.Services.GCDDownloader")
     private var cachedImages: [String: Data] = [:]
     
     func downloadImage(url: String) -> Future<Data> {
