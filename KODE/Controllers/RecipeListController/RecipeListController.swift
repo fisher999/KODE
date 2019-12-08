@@ -31,6 +31,8 @@ class RecipeListController: BaseController {
     //MARK: Init
     override init() {
         super.init()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -80,9 +82,6 @@ class RecipeListController: BaseController {
         }
         sortSegmentedControl.addTarget(self, action: #selector(didSelectSegmentedControl(_:)), for: .valueChanged)
         ascendingButton.addTarget(self, action: #selector(didTappedAscendingButton(_:)), for: .touchUpInside)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 }
 
@@ -98,15 +97,18 @@ private extension RecipeListController {
     }
     
     @objc private func keyboardWillShow(sender: NSNotification) {
-        if let keyboardSize = (sender.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0 {
-                self.view.frame.origin.y -= keyboardSize.height
-            }
-        }
+        guard  let userInfo = sender.userInfo else {return}
+        var keyboardFrame: CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+
+        var contentInset: UIEdgeInsets = self.tableView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        tableView.contentInset = contentInset
     }
     
     @objc private func keyboardWillHide(sender: NSNotification) {
-        self.view.frame.origin.y = 0
+        let contentInset: UIEdgeInsets = UIEdgeInsets.zero
+        tableView.contentInset = contentInset
     }
 }
 
@@ -142,6 +144,7 @@ extension RecipeListController: UITableViewDataSource {
 extension RecipeListController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        presenter.didSelectRowAtIndexPath(indexPath)
     }
 }
 

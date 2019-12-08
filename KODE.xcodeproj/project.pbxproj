@@ -31,6 +31,10 @@
 		57ECEC7D239C1FB800D91EFE /* DetailRecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ECEC7B239C1FB800D91EFE /* DetailRecipeController.swift */; };
 		57ECEC7E239C1FB800D91EFE /* DetailRecipeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57ECEC7C239C1FB800D91EFE /* DetailRecipeController.xib */; };
 		57ECEC81239C293600D91EFE /* DetailRecipePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ECEC80239C293600D91EFE /* DetailRecipePresenter.swift */; };
+		57ECEC8A239CD57A00D91EFE /* ImageRecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ECEC88239CD57A00D91EFE /* ImageRecipeCell.swift */; };
+		57ECEC8B239CD57A00D91EFE /* ImageRecipeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57ECEC89239CD57A00D91EFE /* ImageRecipeCell.xib */; };
+		57ECEC8D239CD76F00D91EFE /* UICollectionViewCell+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ECEC8C239CD76F00D91EFE /* UICollectionViewCell+Dequeue.swift */; };
+		57ECEC8F239CD7C400D91EFE /* UIView+NibLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57ECEC8E239CD7C400D91EFE /* UIView+NibLoad.swift */; };
 		68D787797BD348A2DB87E064 /* Pods_KODETests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 893CB4BB9050E38966D876B9 /* Pods_KODETests.framework */; };
 		ECB677DFC5C72A8920050DC3 /* Pods_KODE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAEFF37733DB58BA887EDC6E /* Pods_KODE.framework */; };
 /* End PBXBuildFile section */
@@ -75,6 +79,10 @@
 		57ECEC7B239C1FB800D91EFE /* DetailRecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecipeController.swift; sourceTree = "<group>"; };
 		57ECEC7C239C1FB800D91EFE /* DetailRecipeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailRecipeController.xib; sourceTree = "<group>"; };
 		57ECEC80239C293600D91EFE /* DetailRecipePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecipePresenter.swift; sourceTree = "<group>"; };
+		57ECEC88239CD57A00D91EFE /* ImageRecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRecipeCell.swift; sourceTree = "<group>"; };
+		57ECEC89239CD57A00D91EFE /* ImageRecipeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageRecipeCell.xib; sourceTree = "<group>"; };
+		57ECEC8C239CD76F00D91EFE /* UICollectionViewCell+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Dequeue.swift"; sourceTree = "<group>"; };
+		57ECEC8E239CD7C400D91EFE /* UIView+NibLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoad.swift"; sourceTree = "<group>"; };
 		5F8383DE7CFE93E354947AAE /* Pods-KODE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KODE.release.xcconfig"; path = "Target Support Files/Pods-KODE/Pods-KODE.release.xcconfig"; sourceTree = "<group>"; };
 		81089B147DDDCE121D83392B /* Pods-KODE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KODE.debug.xcconfig"; path = "Target Support Files/Pods-KODE/Pods-KODE.debug.xcconfig"; sourceTree = "<group>"; };
 		893CB4BB9050E38966D876B9 /* Pods_KODETests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KODETests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -311,6 +319,8 @@
 			children = (
 				5782A4E6239BD96F00B1EB20 /* UITableViewCell+Dequeue.swift */,
 				57ECEC78239C064E00D91EFE /* UIViewController+Alert.swift */,
+				57ECEC8C239CD76F00D91EFE /* UICollectionViewCell+Dequeue.swift */,
+				57ECEC8E239CD7C400D91EFE /* UIView+NibLoad.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -318,6 +328,7 @@
 		57ECEC7A239C1F9B00D91EFE /* DetailRecipeController */ = {
 			isa = PBXGroup;
 			children = (
+				57ECEC82239CD52D00D91EFE /* Cells */,
 				57ECEC7F239C1FBB00D91EFE /* Presenter */,
 				57ECEC7B239C1FB800D91EFE /* DetailRecipeController.swift */,
 				57ECEC7C239C1FB800D91EFE /* DetailRecipeController.xib */,
@@ -331,6 +342,23 @@
 				57ECEC80239C293600D91EFE /* DetailRecipePresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		57ECEC82239CD52D00D91EFE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				57ECEC83239CD53600D91EFE /* ImageCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		57ECEC83239CD53600D91EFE /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				57ECEC88239CD57A00D91EFE /* ImageRecipeCell.swift */,
+				57ECEC89239CD57A00D91EFE /* ImageRecipeCell.xib */,
+			);
+			path = ImageCell;
 			sourceTree = "<group>";
 		};
 		7C956F32708623E2161BEDB7 /* Frameworks */ = {
@@ -427,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5782A4A3239B858600B1EB20 /* LaunchScreen.storyboard in Resources */,
+				57ECEC8B239CD57A00D91EFE /* ImageRecipeCell.xib in Resources */,
 				57ECEC7E239C1FB800D91EFE /* DetailRecipeController.xib in Resources */,
 				5782A4A0239B858600B1EB20 /* Assets.xcassets in Resources */,
 				5782A4C3239B88A900B1EB20 /* RecipeListController.xib in Resources */,
@@ -519,7 +548,9 @@
 				5782A4E0239BB92400B1EB20 /* ConcurrentDownloader.swift in Sources */,
 				57ECEC81239C293600D91EFE /* DetailRecipePresenter.swift in Sources */,
 				5782A4E7239BD96F00B1EB20 /* UITableViewCell+Dequeue.swift in Sources */,
+				57ECEC8D239CD76F00D91EFE /* UICollectionViewCell+Dequeue.swift in Sources */,
 				5782A4C2239B88A900B1EB20 /* RecipeListController.swift in Sources */,
+				57ECEC8A239CD57A00D91EFE /* ImageRecipeCell.swift in Sources */,
 				5782A4C6239B88F000B1EB20 /* BaseController.swift in Sources */,
 				57ECEC79239C064E00D91EFE /* UIViewController+Alert.swift in Sources */,
 				5782A4D7239BAF0300B1EB20 /* RecipeCell.swift in Sources */,
@@ -527,6 +558,7 @@
 				5782A49B239B858400B1EB20 /* ViewController.swift in Sources */,
 				5782A4E4239BB9C300B1EB20 /* GCDDownloader.swift in Sources */,
 				5782A497239B858400B1EB20 /* AppDelegate.swift in Sources */,
+				57ECEC8F239CD7C400D91EFE /* UIView+NibLoad.swift in Sources */,
 				5782A4E2239BB98700B1EB20 /* DownloaderError.swift in Sources */,
 				5782A4CD239B8B9900B1EB20 /* RecipeAPIService.swift in Sources */,
 				5782A4DC239BAF8400B1EB20 /* RecipeCellModel.swift in Sources */,

@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.0.0-rc.3)
+  - Cosmos (20.0.0)
   - FutureKit (3.5.0)
 
 DEPENDENCIES:
   - Alamofire (= 5.0.0-rc.3)
+  - Cosmos (= 20.0)
   - FutureKit (= 3.5)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Cosmos
     - FutureKit
 
 SPEC CHECKSUMS:
   Alamofire: ca8c0de6906873be89d6deec5c8de279e00bf872
+  Cosmos: 8f729a86031b7ad14dd96a1a62ac19518f4b3a49
   FutureKit: 91f6760df942278db387b05f19a9fdfbeb097df2
 
-PODFILE CHECKSUM: 6b502fe4ce77fff9d420deb4b5ae03d7401f827a
+PODFILE CHECKSUM: 41a31f8be7d2705f4a164102e3d6c976d085358b
 
 COCOAPODS: 1.8.4

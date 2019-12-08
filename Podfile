@@ -6,6 +6,7 @@ target 'KODE' do
   use_frameworks!
 	pod 'Alamofire', '5.0.0-rc.3'
 	pod 'FutureKit', '3.5'
+	pod 'Cosmos', 	 '20.0'
 
   target 'KODETests' do
     inherit! :search_paths

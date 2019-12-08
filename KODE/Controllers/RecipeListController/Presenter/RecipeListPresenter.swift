@@ -106,9 +106,9 @@ extension RecipeListPresenterImpl: RecipeListPresenter {
     
     func ascendingType() -> String {
         if ascending {
-            return "По возрастанию"
+            return "По возр."
         } else {
-            return "По убыванию"
+            return "По убыв."
         }
     }
     
@@ -145,8 +145,15 @@ extension RecipeListPresenterImpl: RecipeListPresenter {
     }
     
     func didSelectRowAtIndexPath(_ indexPath: IndexPath) {
-        let presenter = DetailRecipePresenterImpl()
-        
+        guard indexPath.row < self.filteredRecipes.count else {
+            return
+        }
+        let recipe = self.filteredRecipes[indexPath.row]
+        let controller = DetailRecipeController()
+        let presenter = DetailRecipePresenterImpl(recipe: recipe,
+                                                  view: controller)
+        controller.presenter = presenter
+        self.view.pushController(controller)
     }
     
     func searchBarScopeTitles() -> [String] {
